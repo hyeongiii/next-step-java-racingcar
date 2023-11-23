@@ -3,7 +3,6 @@ package step4.domain;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import step4.strategy.MovingStrategy;
-import step4.strategy.RandomNumMovingStrategy;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,12 +18,7 @@ public class CarTest {
     @Test
     @DisplayName("자동차가 전진한다.")
     void move() {
-        MovingStrategy movingStrategy = new RandomNumMovingStrategy() {
-            @Override
-            public boolean canForward() {
-                return true;
-            }
-        };
+        MovingStrategy movingStrategy = () -> true;
 
         Car car = new Car("망고", movingStrategy);
         car.move();
