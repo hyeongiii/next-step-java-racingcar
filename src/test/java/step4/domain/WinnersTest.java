@@ -14,8 +14,8 @@ public class WinnersTest {
         Car car2 = new Car("오렌지", 1);
         Winners winners = new Winners();
 
-        winners.addWinner(car1, 3);
-        winners.addWinner(car2, 3);
+        winners.addWinner(car1);
+        winners.addWinner(car2);
 
         assertThat(winners.winners()).containsExactly("망고");
     }

@@ -10,10 +10,8 @@ public class Winners {
         return winnerList;
     }
 
-    public void addWinner(Car car, int maxDistance) {
-        if (car.distance() == maxDistance) {
-            winnerList.add(car.name());
-        }
+    public void addWinner(Car car) {
+        winnerList.add(car.name());
     }
 
 }
